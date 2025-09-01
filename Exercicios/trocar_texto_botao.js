@@ -2,13 +2,13 @@ import {Text, View, Button, StyleSheet} from 'react-native';
 import {useState} from 'react';
 
 export default function App(){
-  const [texto, setTexto]= useState ("Olá, (Esta de dia, de tarde ou de noite?)");
+  const [texto, setTexto]= useState ("Olá, (Esta de manhã, de tarde ou de noite?)");
   return(
     <View style={styles.Container}>
     <Text  style={styles.Texto}>{texto}</Text>
-    <Button title = "Dia" onPress ={()=> setTexto("Olá, bom dia!")} />
-    <Button title = "Tarde" onPress ={()=>setTexto("Olá, boa tarde!")}/>
-    <Button title = "Noite" onPress = {()=>setTexto("Olá, boa noite!")}/>
+    <Button title = "Esta de manhã" onPress ={()=> setTexto("Olá, bom dia!")} />
+    <Button title = "Esta de tarde" onPress ={()=>setTexto("Olá, boa tarde!")}/>
+    <Button title = "Esta de noite" onPress = {()=>setTexto("Olá, boa noite!")}/>
     </View>
   )
 
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   justifyContent: 'center',
   },
   Texto: {
-    fontSize: '30pt,',
+    fontSize: 28,
     fonteWeight: '700',
   }
 });
